@@ -6336,15 +6336,4 @@ header .navbar-brand img {
 footer img {
   max-width: 200px; }
 
-main {
-  width: 100%;
-  min-height: 100%;
-  height: 100vh;
-  overflow-y: auto;
-  overflow-x: hidden;
-  background-size: cover;
-  position: relative; }
-  main .nav-link {
-    background: #f7f7f7; }
-
 /*# sourceMappingURL=main.css.map */

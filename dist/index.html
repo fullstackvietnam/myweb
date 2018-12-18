@@ -87,85 +87,29 @@
 <!-- ////////////// End Header ////////////// -->
 <!-- ////////////// Begin Main ////////////// -->
     <main>
-      <div class="container mt-5 mb-5">
-        <div class="text-center"> 
-          <div class="row">
-            <div class="col"> 
-              <h1>NETA Vietnam</h1>
-              <p class="lead">Nên dùng tiếng việt ko dấu vì tại hạ chưa viết phần check dấu tiếng Việt</p>
-            </div>
-          </div>
-        </div>
-        <hr>
+      <div class="container">
         <div class="row">
-          <div class="col-sm-3">
-            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical"><a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Mã hóa</a><a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Giải mã</a></div>
-            <h4 class="mt-4">Thông tin</h4>
-            <div class="footer mt-2" id="status"></div>
+          <div class="col-6 item">
+            <input type="radio" name="hehe" value="0">
+            <input type="radio" name="hehe" value="1110">
+            <label for="heo">Số lượng</label>
+            <input class="form-control soluong" id="heo" type="number" value="10">
+            <label>Giá</label>
+            <input class="form-control dongia" type="number" value="1000">
+            <label>Thuế</label>
+            <input class="form-control thue" type="number" value="5">
+            <button class="btn btn-primary">$()Tính</button>
+            <div class="tong">0</div>
           </div>
-          <div class="col-sm-9">
-            <div class="tab-content" id="v-pills-tabContent">
-              <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-                <div id="enc">
-                  <h2>Nội dung</h2>
-                  <div class="form-group">
-                    <textarea class="form-control" id="clearTextInput" rows="10" placeholder="Nhập con mẹ gì đó"></textarea>
-                  </div>
-                  <h2>Khóa</h2>
-                  <div class="form-group">
-                    <div class="input-group">
-                      <input class="form-control" id="key" type="password" placeholder="Mật khẩu mã hóa">
-                      <div class="input-group-append">
-                        <button class="btn btn-warning" id="genkey"> <i class="fa fa-key"></i></button>
-                      </div>
-                      <div class="input-group-append">
-                        <button class="btn btn-secondary" id="loimat"> <i class="fa fa-eye"></i></button>
-                      </div>
-                      <div class="input-group-append">
-                        <button class="btn btn-danger" id="encrypt">Mã hóa</button>
-                      </div>
-                    </div>
-                  </div>
-                  <h2>Kết quả</h2>
-                  <div class="form-group">
-                    <textarea class="form-control" id="cipherTextOutput"></textarea>
-                  </div>
-                  <button class="btn btn-warning copy" id="copyClip" type="button">Copy</button>
-                </div>
-              </div>
-              <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-                <div id="dec">
-                  <h2>Nội dung</h2>
-                  <div class="form-group">
-                    <textarea class="form-control" id="cipherTextInput" rows="10" placeholder="Nhập con mẹ gì đó"></textarea>
-                  </div>
-                  <h2>Khóa</h2>
-                  <div class="form-group">
-                    <div class="input-group">
-                      <input class="form-control" id="key2" type="password" placeholder="Mật khẩu mã hóa">
-                      <div class="input-group-append">
-                        <button class="btn btn-secondary" id="mumat"> <i class="fa fa-eye"></i></button>
-                      </div>
-                      <div class="input-group-append">
-                        <button class="btn btn-success" id="decrypt">Giải mã</button>
-                      </div>
-                    </div>
-                  </div>
-                  <h2>Kết quả</h2>
-                  <div class="form-group">
-                    <textarea class="form-control" id="clearTextOutput"></textarea>
-                  </div>
-                  <button class="btn btn-warning copy" id="copyClip2" type="button">Copy</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="text-center" id="slogan"> 
-          <div class="mt-5 mb-2">
-            <div class="row">
-              <div class="col">Đào tạo CNTT trực tuyến. By Bao Nguyen</div>
-            </div>
+          <div class="col-6 item">
+            <label>Số lượng</label>
+            <input class="form-control soluong" type="number" value="13">
+            <label>Giá</label>
+            <input class="form-control dongia" type="number" value="2000">
+            <label>Thuế</label>
+            <input class="form-control thue" type="number" value="15">
+            <button class="btn btn-primary">$()Tính</button>
+            <div class="tong">0</div>
           </div>
         </div>
       </div>
