@@ -41,6 +41,22 @@ init({
 	numberOfBlobs: 0
 });
 
+var rd = Math.floor(Math.random() * 2);
+if (rd == 1) {
+	$('main').css({
+		"background-image": "url(./img/bg-d.png)"
+	});
+	$('#thong').css({
+		"background-image": "url(./img/thong-d.png)"
+	});
+	$('#player, #pause').css({
+		"color": "#fff",
+		"border": "3px solid #fff"
+	});
+} else {
+	$('main, #thong, #player, #pause').removeAttr('style');
+}
+
 if (getUrlParameter('time') !== 'undefined' && getUrlParameter('time')) {
 	getime = parseInt(getUrlParameter('time')) * 1000;
 }
