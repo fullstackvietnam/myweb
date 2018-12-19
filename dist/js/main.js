@@ -33,11 +33,17 @@ $(function () {
 });
 var particles = ['.blob', '.star'],
     $congratsSection = $('#congrats'),
+    startnewQuote = 0,
+    getime = 10000,
     $title = $('#title');
 init({
 	numberOfStars: 300,
 	numberOfBlobs: 0
 });
+
+if (getUrlParameter('time') !== 'undefined' && getUrlParameter('time')) {
+	getime = parseInt(getUrlParameter('time')) * 1000;
+}
 
 $('#pause').hide();
 
@@ -45,13 +51,13 @@ setTimeout(function () {
 	$('#congrats').show();
 	fancyPopIn();
 	// $('#buzzer').get(0).play();
-	newQuote();
+	newQuote(startnewQuote);
 }, 500);
 setInterval(function () {
 	$('#congrats').show();
 	fancyPopIn();
-	newQuote();
-}, 10000);
+	newQuote(startnewQuote);
+}, getime);
 
 $('#player').on('click', function () {
 	$('#buzzer').get(0).play();
@@ -144,7 +150,7 @@ function init(properties) {
 	}
 }
 
-function newQuote() {
+function newQuote(time) {
 
 	var quotes = [];
 
@@ -165,7 +171,16 @@ function newQuote() {
 		quotes = ['NETA Vietnam', 'Học trực tuyến cùng giảng viên', 'Đào tạo CNTT trực tuyến', 'Hãy là một IT đam mê', 'Những khóa học độc đáo và chất lượng', 'Chúc bạn một giáng sinh an lành', 'Chúc mừng năm mới', 'Mừng Chúa Giáng Sinh'];
 	}
 
-	var randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+	var randomQuote = quotes[0];
+
+	if (time < quotes.length) {
+		startnewQuote = time + 1;
+		randomQuote = quotes[startnewQuote - 1];
+		console.log(randomQuote);
+	} else {
+		startnewQuote = 0;
+		randomQuote = quotes[0];
+	}
 
 	$('.show-quote').fadeOut(300, function () {
 		$(this).text(randomQuote).fadeIn(300);
