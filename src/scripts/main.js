@@ -1,15 +1,24 @@
 var particles = ['.blob', '.star'],
 	$congratsSection = $('#congrats'),
 	startnewQuote = 0,
-	getime =  10000,
+	getime = 10000,
 	$title = $('#title');
 init({
 	numberOfStars: 300,
 	numberOfBlobs: 0
 });
 
-var rd = Math.floor(Math.random() * 2)
-if(rd == 1) {
+var rd
+if (getUrlParameter('skin') !== 'undefined' && getUrlParameter('skin')) {
+	if(getUrlParameter('skin') === 'do') {
+		rd = 1
+	} else {
+		rd = 0
+	}
+} else {
+	rd = Math.floor(Math.random() * 2)
+}
+if (rd == 1) {
 	$('main').css({
 		"background-image": "url(./img/bg-d.png)"
 	})
@@ -23,6 +32,15 @@ if(rd == 1) {
 } else {
 	$('main, #thong, #player, #pause').removeAttr('style')
 }
+
+
+if (getUrlParameter('autoplay') !== 'undefined' && getUrlParameter('autoplay')) {
+	$(document).ready(function(){
+		setTimeout(() => {
+			$('#player').trigger('click')
+		}, 2000);
+	})
+} 
 
 
 if (getUrlParameter('time') !== 'undefined' && getUrlParameter('time')) {
@@ -144,7 +162,7 @@ function newQuote(time) {
 
 	if (getUrlParameter('msg') !== 'undefined' && getUrlParameter('msg')) {
 		var n = getUrlParameter('msg').includes(";");
-		if(n) {
+		if (n) {
 			let hehe = decodeURI(getUrlParameter('msg')).split(';')
 			for (let key in hehe) {
 				if (hehe.hasOwnProperty(key)) {
@@ -155,7 +173,7 @@ function newQuote(time) {
 		} else {
 			quotes.push(decodeURI(getUrlParameter('msg')))
 		}
-		
+
 	} else {
 		quotes = ['NETA Vietnam', 'Học trực tuyến cùng giảng viên', 'Đào tạo CNTT trực tuyến', 'Hãy là một IT đam mê', 'Những khóa học độc đáo và chất lượng', 'Chúc bạn một giáng sinh an lành', 'Chúc mừng năm mới', 'Mừng Chúa Giáng Sinh'];
 	}
@@ -163,18 +181,18 @@ function newQuote(time) {
 
 	var randomQuote = quotes[0];
 
-	if(time < quotes.length) {
+	if (time < quotes.length) {
 		startnewQuote = time + 1
-		randomQuote = quotes[startnewQuote-1];
-		console.log(randomQuote)
+		randomQuote = quotes[startnewQuote - 1];
 	} else {
 		startnewQuote = 0
-		randomQuote = quotes[0];
+		randomQuote = "NETA Vietnam";
 	}
 
 
+
 	$('.show-quote').fadeOut(300, function () {
-		$(this).text(randomQuote).fadeIn(300)
+		$(this).text(randomQuote.replace(/[+]/g, " ")).fadeIn(300)
 	});
 
 }

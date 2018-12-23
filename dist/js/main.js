@@ -41,7 +41,16 @@ init({
 	numberOfBlobs: 0
 });
 
-var rd = Math.floor(Math.random() * 2);
+var rd;
+if (getUrlParameter('skin') !== 'undefined' && getUrlParameter('skin')) {
+	if (getUrlParameter('skin') === 'do') {
+		rd = 1;
+	} else {
+		rd = 0;
+	}
+} else {
+	rd = Math.floor(Math.random() * 2);
+}
 if (rd == 1) {
 	$('main').css({
 		"background-image": "url(./img/bg-d.png)"
@@ -55,6 +64,14 @@ if (rd == 1) {
 	});
 } else {
 	$('main, #thong, #player, #pause').removeAttr('style');
+}
+
+if (getUrlParameter('autoplay') !== 'undefined' && getUrlParameter('autoplay')) {
+	$(document).ready(function () {
+		setTimeout(function () {
+			$('#player').trigger('click');
+		}, 2000);
+	});
 }
 
 if (getUrlParameter('time') !== 'undefined' && getUrlParameter('time')) {
@@ -192,14 +209,13 @@ function newQuote(time) {
 	if (time < quotes.length) {
 		startnewQuote = time + 1;
 		randomQuote = quotes[startnewQuote - 1];
-		console.log(randomQuote);
 	} else {
 		startnewQuote = 0;
-		randomQuote = quotes[0];
+		randomQuote = "NETA Vietnam";
 	}
 
 	$('.show-quote').fadeOut(300, function () {
-		$(this).text(randomQuote).fadeIn(300);
+		$(this).text(randomQuote.replace(/[+]/g, " ")).fadeIn(300);
 	});
 }
 
