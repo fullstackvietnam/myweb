@@ -1,20 +1,20 @@
 {
 	"config": {
 		"SEO": {
-			"AppName": "NETA Vietnam",
+			"AppName": "Elevate Community Church",
 			"mobile_color": "#000000",
-			"cfg_name": "NETA Vietnam",
-			"cfg_url": "neta.edu.vn/noel",
+			"cfg_name": "Elevate Community Church",
+			"cfg_url": "elevate-community.com",
 			"analytics": "UA-124492600-1",
 			"seo_lang": "en",
 			"seo_geo": "EN",
 			"seo_geo_latitude": "10.8263029",
 			"seo_geo_longitude": "106.68025",
 			"app_facebook_ID": "187239652223520",
-			"cfg_description": "Lò đào tạo CNTT chuyên nghiệp tại Sài Gòn. Chúng tôi là các chuyên gia uy tín trong lĩnh vực lập trình ứng dụng, thiết kế và sáng tạo. Chuyên đào tạo lập trình web, đào tạo fullstack nodejs, đào tạo frontend, đào tạo design...",
-			"cfg_keywords": "Lò đào tạo CNTT chuyên nghiệp tại Sài Gòn. Chúng tôi là các chuyên gia uy tín trong lĩnh vực lập trình ứng dụng, thiết kế và sáng tạo. Chuyên đào tạo lập trình web, đào tạo fullstack nodejs, đào tạo frontend, đào tạo design...",
+			"cfg_description": "Bất cứ giai đoạn nào của cuộc sống chúng ta luôn có một cái tên mang tất cả chúng ta lại với nhau. Và chúng ta tôn thờ Ngài như một gia đình. Đấng Chirst!",
+			"cfg_keywords": "Bất cứ giai đoạn nào của cuộc sống chúng ta luôn có một cái tên mang tất cả chúng ta lại với nhau. Và chúng ta tôn thờ Ngài như một gia đình. Đấng Chirst!",
 			"cfg_author": "Bao Nguyen",
-			"cfg_sitenameurl": "https://neta.edu.vn",
+			"cfg_sitenameurl": "https://elevate-community.com",
 			"app_facebook_adminsID": "XXXXXXX,XXXXXXX",
 			"app_appleID": "XXX-XXX-XXX-XXXX",
 			"cfg_sitenameurlgoogle": "XXXXXXXXXXXXXX",
@@ -23,13 +23,13 @@
 			"verf_yandex": "255c94fdb23e4bed"
 		},
 		"favicondist": "./favicon/",
-		"website": "neta.edu.vn",
-		"title": "NETA Vietnam - Lớp học trực tuyến - Hãy là một IT đam mê",
+		"website": "elevate-community.com",
+		"title": "Elevate Community Church - Hội thánh Elevate",
 		"author": {
 			"email": "baonguyenyam@gmail.com",
 			"name": "BaoNguyen",
 			"phone": "0969689893",
-			"link": "https://neta.edu.vn",
+			"link": "https://elevate-community.com",
 			"coding": "Coding by Bao Nguyen"
 		},
 		"license": "MIT",
