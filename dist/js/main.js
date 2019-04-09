@@ -52,12 +52,12 @@ if (getUrlParameter('skin') !== 'undefined' && getUrlParameter('skin')) {
 	rd = Math.floor(Math.random() * 2);
 }
 if (rd == 1) {
-	$('main').css({
-		"background-image": "url(./img/bg-d.png)"
-	});
-	$('#thong').css({
-		"background-image": "url(./img/thong-d.png)"
-	});
+	// $('main').css({
+	// 	"background-image": "url(./img/bg-d.png)"
+	// })
+	// $('#thong').css({
+	// 	"background-image": "url(./img/thong-d.png)"
+	// })
 	$('#player, #pause').css({
 		"color": "#fff",
 		"border": "3px solid #fff"
@@ -201,7 +201,7 @@ function newQuote(time) {
 			quotes.push(decodeURI(getUrlParameter('msg')));
 		}
 	} else {
-		quotes = ['NETA Vietnam', 'Học trực tuyến cùng giảng viên', 'Đào tạo CNTT trực tuyến', 'Hãy là một IT đam mê', 'Những khóa học độc đáo và chất lượng', 'Chúc bạn một giáng sinh an lành', 'Chúc mừng năm mới', 'Mừng Chúa Giáng Sinh'];
+		quotes = ['Easter celebration', 'Elevate Community Church', 'Kỷ Niệm Lễ Phục Sinh', 'Hội thánh Elevate'];
 	}
 
 	var randomQuote = quotes[0];
@@ -211,7 +211,7 @@ function newQuote(time) {
 		randomQuote = quotes[startnewQuote - 1];
 	} else {
 		startnewQuote = 0;
-		randomQuote = "NETA Vietnam";
+		randomQuote = "Easter celebration";
 	}
 
 	$('.show-quote').fadeOut(300, function () {

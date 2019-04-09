@@ -8,7 +8,7 @@ main
 	min-height: 100%
 	height: 100vh
 	overflow: hidden
-	background: url('../img/bg.png') top center no-repeat
+	background: url('../img/bg.jpg') top center no-repeat
 	background-size: cover
 	position: relative
 	padding: 2rem
@@ -16,7 +16,7 @@ main
 	justify-content: center 
 	align-items: center 
 	#player, #pause
-		+pos(fix, null null .8rem 2rem)
+		+pos(fix, null null 2rem 2rem)
 		z-index: 999
 		width: 3rem
 		height: 3rem
@@ -25,8 +25,8 @@ main
 		display: flex
 		justify-content: center 
 		align-items: center 
-		color: #ff0
-		border: 3px solid #ff0
+		color: #fff
+		border: 3px solid #fff
 		cursor: pointer
 
 	#buzzer
@@ -59,14 +59,15 @@ main
 				max-width: 100%
 				width: 280px
 		#slogan 
-			+mar(3rem 0)
-			width: 100%
 			text-align: center
+			padding: 3rem
 			color: #fff
+			width: 100%
 			+fw(900)
 			text-transform: uppercase
 			+fz(1rem)
 			text-shadow: 1px 1px rgba(0, 0, 0, 0.3)
+			+pos(fix, 0 null null 0)
 		#thong
 			background: url('../img/thong.png') bottom right no-repeat
 			+pos(fix, null 0 2rem null)
@@ -91,6 +92,7 @@ main
 		.noel
 			#slogan 
 				+fz(2.5rem)
+				width: auto
 // 	@media (min-width: 1366px)
 // 		#menu 
 // 			+pos(abs,30% 20% null null)
